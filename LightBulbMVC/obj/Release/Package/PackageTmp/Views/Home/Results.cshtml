@@ -1,0 +1,20 @@
+﻿@model LightBulbMVC.Models.LightBulbViewModel
+
+<div class="container">
+    @if (this.Model.Results != null)
+    {
+        <h3>The following light bulbs will be switched ON at the end</h3>
+        <hr/>
+        foreach (KeyValuePair<int, bool> kvp in this.Model.Results)
+        {
+            <div class="col-md-2">
+                <div class="text-center">
+                    <img src="~/img/bulb-on.jpg" />
+                </div>
+                <div class="text-center">
+                    <h3>@kvp.Key</h3>
+                </div>
+            </div>
+        }
+    }
+</div>
